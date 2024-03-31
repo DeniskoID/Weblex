@@ -1,0 +1,19 @@
+.subscribe-form {
+  display: flex;
+  column-gap: 20px;
+  border-radius: var(--border-radius);
+  padding: 58px 40px;
+  background-color: var(--color-dark-alt);
+
+  @include desktop {
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    row-gap: 22px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+  }
+}

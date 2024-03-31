@@ -1,0 +1,76 @@
+.header {
+  padding-top: rem(20);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-block: rem(20);
+  }
+
+  &__logo {
+    margin-right: rem(52);
+
+    @include tablet {
+      max-width: rem(120);
+    }
+  }
+
+  &__menu {
+    margin-right: auto;
+    font-size: rem(16);
+  }
+
+  &__menu-list {
+    display: flex;
+    column-gap: rem(30);
+    align-items: center;
+  }
+
+  &__menu-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition-duration: inherit;
+      translate: -50%;
+    }
+
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    @include tablet {
+      height: 48px;
+      font-size: 16px;
+      padding-inline: 16px;
+    }
+  }
+
+  &__phone {
+    margin-right: rem(36);
+  }
+
+  // @include desktop {
+  //   padding-top: 30px;
+  // }
+
+  @include mobile {
+    padding-top: 15px;
+  }
+}
