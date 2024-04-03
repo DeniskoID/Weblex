@@ -3,3 +3,6 @@
 
 import lenis from './modules/lenis.js';
 lenis.start();
+
+import mobileMenuInteraction from './modules/mobile-menu.js';
+mobileMenuInteraction();

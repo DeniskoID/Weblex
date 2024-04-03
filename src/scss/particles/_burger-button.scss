@@ -1,24 +1,73 @@
-.burger-button {
-  @include reset-button;
-  @include square(48px);
+.mobile-nav-btn {
+  @include square(40px);
 
   position: relative;
-  border-radius: var(--border-radius-small);
-
-  &::after {
-    @include abs-center;
-
-    content: "";
-    border-radius: 5px;
-    width: 50%;
-    height: 2px;
-    box-shadow:
-      0 -8px,
-      0 8px;
-    background-color: var(--color-dark);
-  }
+  z-index: 20;
+  display: none;
+  align-items: center;
+  justify-content: center;
 
   @include hover {
-    background-color: var(--color-accent);
+    .nav-icon,
+    .nav-icon::before,
+    .nav-icon::after {
+      background-color: var(--action-color);
+    }
   }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.nav-icon {
+  position: relative;
+  display: block;
+  width: rem(40);
+  height: rem(2);
+  background-color: var(--text-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: rem(40);
+  height: rem(2);
+  background-color: var(--text-color);
+  transition:
+    transform 0.1s ease-in,
+    top 0.1s linear 0.1s,
+    background-color 0.2s ease-in-out;
+}
+
+.nav-icon::before {
+  top: calc(rem(1) * -8);
+}
+
+.nav-icon::after {
+  top: calc(rem(1) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent !important;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  transition:
+    top 0.1s linear,
+    transform 0.1s ease-in 0.1s;
+}
+
+.nav-icon.nav-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  transform: rotate(-45deg);
 }

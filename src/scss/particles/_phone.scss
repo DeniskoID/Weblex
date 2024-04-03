@@ -1,0 +1,7 @@
+.phone {
+  font-family: "Inter", sans-serif;
+
+  @include hover {
+    color: var(--action-color);
+  }
+}

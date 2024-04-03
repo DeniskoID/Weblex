@@ -1,15 +1,15 @@
 /* stylelint-disable media-query-no-invalid */
 /* stylelint-disable scss/dollar-variable-empty-line-before */
-$desktop-above: 1141px;
+$desktop-above: 1140.99px;
 $desktop: 1140px;
 
-$tablet-above: 1024px;
+$tablet-above: 1023.99px;
 $tablet: 1023px;
 
-$mobile-above: 768px;
+$mobile-above: 767.99px;
 $mobile: 767px;
 
-$mobile-s-above: 481px;
+$mobile-s-above: 480.99px;
 $mobile-s: 480px;
 
 @mixin desktop-above {

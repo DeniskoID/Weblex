@@ -1,9 +1,16 @@
 .mobile-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
   margin: 0;
   border: none;
-  padding: 14px 20px;
+  padding: rem(20) rem(20);
   width: 100%;
   height: 100%;
+  color: var(--tet-color);
+  background-color: var(--bg-color);
+  visibility: hidden;
 
   &:modal {
     max-width: 100%;
@@ -15,11 +22,36 @@
     justify-content: end;
   }
 
+  &__body {
+    @include flex-center;
+
+    flex-direction: column;
+  }
+
   &__list {
     @include flex-center;
 
     flex-direction: column;
-    min-height: 80vh;
-    row-gap: 30px;
+    min-height: 60vh;
+    row-gap: rem(15);
   }
+
+  &__item {
+    overflow: hidden;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  @include mobile {
+    padding-top: rem(15);
+  }
+
+  // @keyframes openMenu {
+  //   to {
+  //     opacity: 1;
+  //     transform: translateX(0);
+  //   }
+  // }
 }

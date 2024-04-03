@@ -4,9 +4,6 @@
     column-gap: rem(10);
   }
 
-  &__item {
-  }
-
   &__link {
     @include flex-center(true);
     @include square(40px);
@@ -14,7 +11,7 @@
     color: var(--text-color);
 
     @include hover {
-      color: var(--color-accent);
+      color: var(--color-blue);
     }
   }
 }

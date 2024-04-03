@@ -14,7 +14,7 @@
     border-radius: 5px;
     width: 70%;
     height: 2px;
-    background-color: var(--color-dark);
+    background-color: var(--text-color);
   }
 
   &::before {
@@ -26,6 +26,6 @@
   }
 
   @include hover {
-    background-color: var(--color-accent);
+    background-color: var(--action-color);
   }
 }

@@ -513,6 +513,7 @@
     "function-url-quotes": "always",
     "import-notation": "string",
     "keyframe-declaration-no-important": true,
+    "keyframes-name-pattern": null,
     "length-zero-no-unit": true,
     "max-nesting-depth": null,
     "media-feature-name-no-unknown": true,
