@@ -21,19 +21,22 @@
 
   // Gradients
   --body-lines-gd: linear-gradient(180deg, rgb(132 59 181 / 10%) 47%, rgb(252 176 69 / 10%) 87%);
+  --text-gradient: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
+  --text-gradient-alt: linear-gradient(123deg, #fcb045 24.21%, #ff3f78 100%);
 
   // Shadows
   --shadow: 0 5px 0 0 var(--color-dark);
 
   // Fonts
   --font-family-base: "Montserrat", sans-serif;
+  --font-family-extra: "Inter", sans-serif;
 
   // Containers
   --container-width: 1140px;
   --container-padding-x: 20px;
 
   // Intervals
-  --section-padding-y: 70px;
+  --section-padding-y: 150px;
 
   // Sizes
   --input-height: 59px;

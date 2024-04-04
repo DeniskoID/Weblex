@@ -2,32 +2,20 @@
 .button {
   @include flex-center(true);
 
-  border: var(--border);
-  border-radius: var(--border-radius);
   height: var(--button-height);
-  font-size: 20px;
-  color: var(--color-light);
-  background-color: var(--color-dark);
+  font-size: rem(16);
+  line-height: 1.3;
+  color: inherit;
+  background-color: var(--action-color);
   cursor: pointer;
   padding-inline: 35px;
 
   @include hover {
-    color: var(--color-dark);
-    background-color: var(--color-accent);
+    box-shadow: 0 0 40px 6px rgb(64 119 243 / 30%);
   }
 
   &--transparent {
     color: var(--color-dark);
     background-color: transparent;
-  }
-
-  &--accent {
-    color: var(--color-dark);
-    background-color: var(--color-accent);
-
-    @include hover {
-      color: var(--color-accent);
-      background-color: var(--color-dark);
-    }
   }
 }

@@ -1,0 +1,17 @@
+.hero-curtain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45vw;
+  height: 100%;
+  background: radial-gradient(
+    304.35% 148.2% at 3.2% 3.49%,
+    rgb(255 246 233 / 0%) 0%,
+    rgb(26 29 35 / 0.28%) 26%,
+    rgb(26 29 35 / 1%) 52%,
+    rgb(26 29 35 / 10%) 70%,
+    rgb(26 29 35 / 10%) 100%
+  );
+  transform: rotate(-180deg);
+  backdrop-filter: blur(15px);
+}

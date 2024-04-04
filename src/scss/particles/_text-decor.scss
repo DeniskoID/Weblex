@@ -1,0 +1,16 @@
+.text-decor {
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  &--large {
+    font-weight: 900;
+  }
+
+  &--uppercase {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}

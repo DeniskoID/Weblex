@@ -1,16 +1,18 @@
 .page {
   height: 100%;
   min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
 }
 
 .page-body {
   height: 100%;
+  min-width: 320px;
   font-family: var(--font-family-base);
   font-weight: 400;
+  font-size: rem(16);
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
-  padding-inline: var(--container-padding-x);
 }
 
 a,
@@ -24,27 +26,4 @@ svg * {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 500;
-}
-
-h1,
-.h1 {
-}
-
-h2,
-.h2 {
-}
-
-h3,
-.h3 {
-}
-
-h4,
-.h4 {
 }

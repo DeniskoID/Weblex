@@ -1,5 +1,15 @@
 .section {
-  padding-block: var(--section-padding-y);
+  margin-bottom: var(--section-padding-y);
+
+  &__body {
+    position: relative;
+  }
+
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: rem(48);
+  }
 
   &__header {
     display: flex;
