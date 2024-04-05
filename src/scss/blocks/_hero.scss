@@ -8,6 +8,10 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
+    border-left: 1px solid transparent;
+    border-image: var(--body-lines-gd-alt);
+    border-image-slice: 1;
     width: 45.5vw;
     height: 100%;
     background-image: radial-gradient(
@@ -20,7 +24,13 @@
       rgb(26 29 35 / 10%) 100%
     );
     transform: rotate(-180deg);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+
+    @include mobile {
+      border: unset;
+      background: unset;
+      backdrop-filter: unset;
+    }
   }
 
   &::after {
@@ -28,16 +38,22 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
     width: 45.5vw;
     height: 100%;
     background-image: url("../img/hero/noise.png");
     opacity: 0.15;
     mix-blend-mode: overlay;
+
+    @include mobile {
+      background: unset;
+    }
   }
 
   &__body {
     --_hero-pt: clamp(5.625rem, 1.757rem + 15.87vw, 13.063rem);
 
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding-top: var(--_hero-pt);
@@ -48,15 +64,29 @@
 
     @include mobile {
       flex-direction: column;
+      background: unset;
     }
   }
 
   &__info {
-    position: relative;
     z-index: 20;
     display: flex;
     flex-basis: rem(362);
     flex-direction: column;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-image: var(--body-lines-gd);
+
+      @include mobile {
+        display: none;
+      }
+    }
 
     @include mobile {
       flex-basis: unset;

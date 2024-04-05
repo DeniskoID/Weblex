@@ -1,0 +1,70 @@
+.balls-bg {
+  @include abs-center;
+
+  position: absolute;
+  width: clamp(15.625rem, 11.932rem + 18.47vw, 23.75rem);
+  height: rem(695);
+  isolation: isolate;
+
+  &::before {
+    @include square(107px);
+
+    content: "";
+    position: absolute;
+    left: rem(-30);
+    top: rem(60);
+    background-image: url("../img/hero/red-ball.png");
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+
+  &::after {
+    @include square(85px);
+
+    content: "";
+    position: absolute;
+    right: rem(-30);
+    top: rem(-20);
+    background-image: url("../img/hero/purple-ball.png");
+    background-repeat: no-repeat;
+  }
+
+  &-extra {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      @include square(62px);
+
+      content: "";
+      position: absolute;
+      left: rem(75);
+      bottom: rem(10);
+      background-image: url("../img/hero/yellow-ball.png");
+      background-repeat: no-repeat;
+      opacity: 0.8;
+
+      @include mobile {
+        bottom: rem(150);
+        opacity: 0.4;
+      }
+    }
+
+    &::after {
+      @include square(39px);
+
+      content: "";
+      position: absolute;
+      right: rem(30);
+      bottom: rem(130);
+      background-image: url("../img/hero/red-ball-s.png");
+      background-repeat: no-repeat;
+      opacity: 0.8;
+
+      @include mobile {
+        bottom: rem(250);
+      }
+    }
+  }
+}
