@@ -6,3 +6,6 @@ lenis.start();
 
 import mobileMenuInteraction from './modules/mobile-menu.js';
 mobileMenuInteraction();
+
+import fixOpacity from './utilits/fix-opacity.js';
+fixOpacity();
