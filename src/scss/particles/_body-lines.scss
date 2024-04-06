@@ -1,4 +1,4 @@
-.page-decor {
+.page-border-lines {
   position: fixed;
   left: 50%;
   z-index: -1;
@@ -11,4 +11,21 @@
   max-width: var(--container-width);
   transform: translateX(-50%);
   margin-inline: auto;
+}
+
+.page-line-left,
+.page-line-right {
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-image: var(--body-lines-gd);
+}
+
+.page-line-left {
+  left: 45vw;
+}
+
+.page-line-right {
+  right: 27vw;
 }

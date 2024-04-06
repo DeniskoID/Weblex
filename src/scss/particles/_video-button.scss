@@ -1,0 +1,25 @@
+.video-button {
+  @include square(44px);
+
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--button-border);
+  border-radius: 50%;
+
+  &::before {
+    @include square(22px);
+
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/play-arrow.svg");
+    transform: translate(1px, 1px);
+  }
+
+  @include hover {
+    border: transparent;
+    background-color: var(--action-color);
+  }
+}
