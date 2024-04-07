@@ -45,16 +45,10 @@
     gap: rem(10);
 
     @include mobile {
+      flex-wrap: initial;
       align-items: center;
-      justify-content: center;
       max-width: unset;
     }
-  }
-
-  &__video-button {
-  }
-
-  &__video-gift {
   }
 
   &__decor {
@@ -92,6 +86,16 @@
 
   &__photo {
     position: relative;
+
+    &::before {
+      @include square(60px);
+
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+      background-image: url("../img/intro/purple-ball.png");
+    }
 
     @include mobile {
       display: flex;
