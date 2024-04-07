@@ -8,11 +8,19 @@
   --color-gray: #f3f3f3;
   --color-gray-alt: #898989;
 
+  // Blurred balls colors
+  --bb-color-orange: #fcb045;
+  --bb-color-violet: #833ab4;
+  --bb-color-scarlet: #ee3e34;
+  --bb-color-dark-red: #961a1a;
+
   // Dark theme
   --bg-color: var(--color-dark);
   --text-color: var(--color-light-alt);
   --action-color: var(--color-blue);
-  --button-border: var(--color-light-alt); // Borders
+  --button-border: var(--color-light-alt);
+
+  // Borders
   --border: 1px solid var(--color-dark);
   --border-radius: 14px;
   --border-radius-small: 7px;

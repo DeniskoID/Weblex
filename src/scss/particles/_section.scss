@@ -1,32 +1,49 @@
 .section {
   margin-bottom: var(--section-padding-y);
 
-  &__body {
+  &__content {
     position: relative;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(50);
+    gap: rem(70);
+
+    @include mobile {
+      margin-bottom: rem(30);
+      gap: rem(50);
+    }
   }
 
   &__title {
     --_section-title-fz: clamp(2.063rem, 0.188rem + 9.38vw, 3rem);
 
-    margin-bottom: rem(70);
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: var(--_section-title-fz);
     line-height: 1.3;
 
-    @include mobile {
-      margin-bottom: rem(50);
+    &:only-child {
+      margin-bottom: rem(20);
+
+      @include mobile {
+        margin-bottom: rem(20);
+      }
     }
   }
 
   &--hidden-x {
     overflow-x: hidden;
   }
-}
 
-.section-description {
-  font-family: var(--font-family-extra);
-  font-weight: 400;
-  font-size: rem(24);
-  line-height: 1.3;
+  &__description,
+  &-description {
+    max-width: rem(390);
+    font-family: var(--font-family-extra);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 1.3;
+  }
 }

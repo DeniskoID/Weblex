@@ -1,32 +1,71 @@
 .blurred-balls {
-  position: absolute;
-  left: 0;
-  top: 0;
+  --_blur-m: 392px;
 
-  // z-index: -1;
-  width: 100%;
-  height: 100%;
+  position: relative;
 
   &::before,
   &::after {
-    @include square(280px);
-
     content: "";
     position: absolute;
     opacity: var(--blur-opacity, 0.4);
-    filter: blur(392px);
-    transform: translateY(-50%);
   }
 
-  &::before {
-    left: 50%;
-    bottom: -25%;
-    background-color: #fcb045;
+  &--hero {
+    &::before,
+    &::after {
+      @include square(280px);
+
+      filter: blur(var(--_blur-m));
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 50%;
+      bottom: -25%;
+      background-color: var(--bb-color-orange);
+    }
+
+    &::after {
+      left: -25%;
+      top: 50%;
+      background-color: var(--bb-color-dark-red);
+    }
   }
 
-  &::after {
-    left: -25%;
-    top: 50%;
-    background-color: #961a1a;
+  &--intro {
+    &::after,
+    &::before {
+      @include square(308px);
+
+      filter: blur(var(--_blur-m));
+    }
+
+    &::before {
+      right: -50%;
+      background-color: var(--bb-color-violet);
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      left: 10%;
+      top: 100%;
+      background-color: var(--bb-color-scarlet);
+      transform: translateY(-50%);
+    }
+  }
+
+  &--about {
+    &::before {
+      @include square(364px);
+
+      left: -10%;
+      top: 0%;
+      background-color: var(--bb-color-dark-red);
+      filter: blur(var(--_blur-m));
+    }
+
+    &::after {
+      content: none;
+    }
   }
 }

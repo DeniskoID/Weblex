@@ -56,29 +56,6 @@
     flex-grow: 1;
     background: linear-gradient(-50deg, rgb(187 86 209 / 8%) 36%, rgb(14 16 20 / 3%) 70%, rgb(187 86 209 / 0%) 100%);
 
-    &::after,
-    &::before {
-      @include square(308px);
-
-      content: "";
-      position: absolute;
-      opacity: var(--blur-opacity, 0.4);
-      filter: blur(392px);
-    }
-
-    &::before {
-      right: -50%;
-      background-color: #833ab4;
-      transform: translateX(-50%);
-    }
-
-    &::after {
-      left: 10%;
-      top: 100%;
-      background-color: #ee3e34;
-      transform: translateY(-50%);
-    }
-
     @include mobile {
       order: -1;
     }

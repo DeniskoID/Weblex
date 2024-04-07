@@ -1,0 +1,25 @@
+.about {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: rem(30);
+
+  &__item {
+    max-width: rem(227);
+  }
+
+  &__text {
+    font-family: var(--font-family-extra);
+    font-size: rem(18);
+    line-height: 1.3;
+  }
+
+  &__count {
+    display: block;
+    margin-bottom: rem(5);
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
