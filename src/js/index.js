@@ -9,3 +9,6 @@ mobileMenuInteraction();
 
 import fixOpacity from './utilits/fix-opacity.js';
 fixOpacity();
+
+import videoSmartStart from './modules/yt-player.js';
+videoSmartStart();

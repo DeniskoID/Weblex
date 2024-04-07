@@ -1,8 +1,10 @@
-.video-embed {
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: none;
-  width: 100%;
-  height: 100%;
+.yt-video {
+  &__embed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 }
