@@ -12,3 +12,6 @@ fixOpacity();
 
 import videoSmartStart from './modules/yt-player.js';
 videoSmartStart();
+
+import menuBgAnimation from './modules/header-bg.js';
+menuBgAnimation();
