@@ -50,6 +50,7 @@
 
   // Animations
   --transition-duration: 0.2s;
+  --transition-easing: ease-in-out;
 
   @include desktop {
     --section-padding-y: 150px;

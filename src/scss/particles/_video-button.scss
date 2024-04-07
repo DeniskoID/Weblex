@@ -19,7 +19,7 @@
   }
 
   @include hover {
-    border: transparent;
+    border-color: var(--action-color);
     background-color: var(--action-color);
   }
 }

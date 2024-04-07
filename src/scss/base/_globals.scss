@@ -22,6 +22,7 @@ input,
 textarea,
 svg * {
   transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
 }
 
 a {
