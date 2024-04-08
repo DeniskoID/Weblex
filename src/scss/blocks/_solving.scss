@@ -1,0 +1,100 @@
+.solving {
+  &__problems {
+    display: grid;
+    grid-template-columns: var(--first-column-width) 1fr;
+    margin-bottom: rem(50);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__first-problem {
+    @include tablet {
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__problem-title {
+    margin-bottom: rem(30);
+  }
+
+  &__first-problem-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: rem(296);
+    row-gap: rem(20);
+
+    @include tablet {
+      --_fpl-gap: 30px;
+
+      column-gap: var(--_fpl-gap);
+      grid-template-columns: calc(var(--first-column-width) - var(--_fpl-gap)) 1fr 1fr;
+      max-width: unset;
+    }
+
+    @include mobile {
+      grid-template-columns: 70%;
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__second-problem-list {
+    --_spl-gap: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20) rem(30);
+
+    @include tablet {
+      grid-template-columns: calc(var(--first-column-width) - var(--_spl-gap)) 1fr;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__results-list {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(30);
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__results-item {
+    --_ri-gap: 20px;
+
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - var(--_ri-gap) * 2);
+    max-width: rem(300);
+    gap: var(--_ri-gap);
+
+    @include mobile {
+      width: unset;
+    }
+  }
+
+  &__results-icon {
+    @include square(70px);
+
+    &--func {
+      background-image: url("../img/solves/func.png");
+    }
+
+    &--teach {
+      background-image: url("../img/solves/teach.png");
+    }
+
+    &--sales {
+      background-image: url("../img/solves/sales.png");
+    }
+  }
+}
