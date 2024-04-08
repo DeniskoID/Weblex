@@ -1,54 +1,9 @@
+/* stylelint-disable order/order */
 .hero {
+  position: relative;
   background-image: url("../img/hero/dots.png");
   background-position: center;
   background-repeat: no-repeat;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    border-left: 1px solid transparent;
-    border-image: var(--body-lines-gd-alt);
-    border-image-slice: 1;
-    width: 45vw;
-    height: 100%;
-    background-image: radial-gradient(
-      304.35% 148.2% at 3.2% 3.49%,
-      rgb(255 246 233 / 0%) 0%,
-      rgb(26 29 35 / 0.28%) 26%,
-      rgb(26 29 35 / 1%) 52%,
-      rgb(26 29 35 / 10%) 70%,
-      rgb(26 29 35 / 10%) 91%,
-      rgb(26 29 35 / 10%) 100%
-    );
-    transform: rotate(-180deg);
-    backdrop-filter: blur(8px);
-
-    @include mobile {
-      border: unset;
-      background: unset;
-      backdrop-filter: unset;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    width: 45vw;
-    height: 100%;
-    background-image: url("../img/hero/noise.png");
-    opacity: 0.15;
-    mix-blend-mode: overlay;
-
-    @include mobile {
-      background: unset;
-    }
-  }
 
   &__body {
     --_hero-pt: clamp(5.625rem, 1.757rem + 15.87vw, 13.063rem);
@@ -61,6 +16,20 @@
     background-image: url("../img/hero/ball.png");
     background-position: center;
     background-repeat: no-repeat;
+
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: 1;
+    //     width: var(--first-column-width);
+    //     height: 100%;
+
+    //     @include mobile {
+    //       background: unset;
+    //     }
+    //   }
 
     @include mobile {
       flex-direction: column;
@@ -124,5 +93,60 @@
     top: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &__curtain-blur {
+    border-left: 1px solid transparent;
+    border-image: var(--body-lines-gd-alt);
+    border-image-slice: 1;
+  }
+
+  &__curtain-blur,
+  &__curtain-noise {
+    left: 0;
+    width: var(--first-column-width);
+  }
+
+  &__curtain-blur::before,
+  &__curtain-noise::before {
+    content: "";
+    left: 100%;
+    z-index: 1;
+    width: 100vw;
+  }
+
+  &__curtain-blur,
+  &__curtain-blur::before,
+  &__curtain-noise,
+  &__curtain-noise::before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transform: rotate(-180deg);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__curtain-blur,
+  &__curtain-blur::before {
+    background-image: radial-gradient(
+      304.35% 148.2% at 3.2% 3.49%,
+      rgb(255 246 233 / 0%) 0%,
+      rgb(26 29 35 / 0.28%) 26%,
+      rgb(26 29 35 / 1%) 52%,
+      rgb(26 29 35 / 10%) 70%,
+      rgb(26 29 35 / 10%) 91%,
+      rgb(26 29 35 / 10%) 100%
+    );
+    backdrop-filter: blur(8px);
+  }
+
+  &__curtain-noise,
+  &__curtain-noise::before {
+    background-image: url("../img/hero/noise.png");
+    opacity: 0.15;
+    mix-blend-mode: overlay;
   }
 }

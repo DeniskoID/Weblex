@@ -1,11 +1,15 @@
 .about {
+  --_about-grid-gap: 30px;
+
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: rem(30);
+  display: grid;
+  grid-template-columns: calc(var(--first-column-width) - var(--_about-grid-gap)) 1fr 1fr;
+  gap: var(--_about-grid-gap);
 
   &__item {
-    max-width: rem(227);
+    p {
+      max-width: rem(227);
+    }
   }
 
   &__text {
@@ -20,6 +24,8 @@
   }
 
   @include mobile {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: rem(30);
   }
 }
