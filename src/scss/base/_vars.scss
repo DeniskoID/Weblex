@@ -6,7 +6,7 @@
   --color-light-alt: #e4e5ea;
   --color-blue: #4077f3;
   --color-gray: #f3f3f3;
-  --color-gray-alt: #898989;
+  --color-red: #fd1d1d;
 
   // Blurred balls colors
   --bb-color-orange: #fcb045;
@@ -19,6 +19,7 @@
   --text-color: var(--color-light-alt);
   --action-color: var(--color-blue);
   --button-border: var(--color-light-alt);
+  --error-color: var(--color-red);
 
   // Borders
   --border: 1px solid var(--color-dark);
@@ -34,6 +35,13 @@
     rgb(255 215 160 / 50%) 22%,
     #fd8787 55%,
     rgb(219 166 255) 100%
+  );
+  --section-border-top-gd: linear-gradient(90deg, #833ab4 0%, #fd1d1d 42%, #fcb045 100%);
+  --section-border-bottom-gd: linear-gradient(
+    90deg,
+    rgb(131 58 180 / 40%) 0%,
+    rgb(253 29 29 / 40%) 42%,
+    rgb(252 176 69 / 0%) 100%
   );
   --text-gradient: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
   --text-gradient-alt: linear-gradient(123deg, #fcb045 24.21%, #ff3f78 100%);
@@ -53,8 +61,8 @@
   --section-padding-y: 150px;
 
   // Sizes
-  --input-height: 59px;
-  --button-height: 68px;
+  --input-height: 61px;
+  --button-height: 61px;
 
   // Animations
   --transition-duration: 0.2s;

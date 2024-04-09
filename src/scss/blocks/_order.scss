@@ -1,0 +1,18 @@
+.order {
+  --_orderGridGap: 30px;
+
+  display: grid;
+  column-gap: var(--_orderGridGap);
+  grid-template-columns: calc(var(--first-column-width) - var(--_orderGridGap)) 1fr;
+
+  &__description {
+  }
+
+  &__form {
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    row-gap: rem(40);
+  }
+}

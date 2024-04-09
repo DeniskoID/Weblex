@@ -3,6 +3,10 @@
 
   &__content {
     position: relative;
+
+    &--with-paddings {
+      padding-block: rem(50);
+    }
   }
 
   &__header {
@@ -45,6 +49,32 @@
     overflow-x: hidden;
   }
 
+  &--with-borders {
+    position: relative;
+    margin-bottom: rem(100);
+    border-image: var(--section-border-top-gd);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      opacity: 0.5;
+    }
+
+    &::before {
+      top: 0;
+      background-image: var(--section-border-top-gd);
+    }
+
+    &::after {
+      top: bottom;
+      background-image: var(--section-border-bottom-gd);
+    }
+  }
+
   /* stylelint-disable-next-line order/order */
   &-description {
     margin-bottom: rem(50);
@@ -52,6 +82,8 @@
 
   &__description,
   &-description {
+    --_descr-grid-gap: 20px;
+
     max-width: rem(390);
     font-family: var(--font-family-extra);
     font-weight: 400;
@@ -62,12 +94,14 @@
       font-size: rem(18);
     }
 
-    &--grid {
-      --_descr-grid-gap: 20px;
-
+    &--grid-row,
+    &--grid-col {
       display: grid;
-      grid-template-columns: calc(var(--first-column-width) - var(--_descr-grid-gap)) 1fr;
       max-width: unset;
+    }
+
+    &--grid-row {
+      grid-template-columns: calc(var(--first-column-width) - var(--_descr-grid-gap)) 1fr;
       gap: var(--_descr-grid-gap);
 
       p:not(:first-child) {
@@ -77,6 +111,24 @@
       @include mobile {
         --_descr-grid-gap: 25px;
 
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--grid-col {
+      align-self: self-start;
+      margin-bottom: unset;
+      gap: var(--_descr-grid-gap);
+
+      p {
+        padding-right: clamp(0rem, -71.724rem + 112.07vw, 8.125rem);
+      }
+
+      @include tablet {
+        grid-template-columns: calc(var(--first-column-width) - var(--_descr-grid-gap)) 1fr;
+      }
+
+      @include mobile {
         grid-template-columns: 1fr;
       }
     }
