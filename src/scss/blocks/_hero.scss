@@ -1,7 +1,7 @@
 /* stylelint-disable order/order */
 .hero {
   position: relative;
-  background-image: url("../img/hero/dots.png");
+  background-image: url("../img/page-decor/dots.png");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -13,23 +13,9 @@
     justify-content: space-between;
     padding-top: var(--_hero-pt);
     padding-bottom: rem(100);
-    background-image: url("../img/hero/ball.png");
+    background-image: url("../img/page-decor/balls/big-ball.png");
     background-position: center;
     background-repeat: no-repeat;
-
-    //   &::after {
-    //     content: "";
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     z-index: 1;
-    //     width: var(--first-column-width);
-    //     height: 100%;
-
-    //     @include mobile {
-    //       background: unset;
-    //     }
-    //   }
 
     @include mobile {
       flex-direction: column;
@@ -145,7 +131,7 @@
 
   &__curtain-noise,
   &__curtain-noise::before {
-    background-image: url("../img/hero/noise.png");
+    background-image: url("../img/page-decor/noise.png");
     opacity: 0.15;
     mix-blend-mode: overlay;
   }
