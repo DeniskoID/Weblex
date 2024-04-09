@@ -1,8 +1,23 @@
 .solving {
   &__problems {
+    position: relative;
     display: grid;
     grid-template-columns: var(--first-column-width) 1fr;
     margin-bottom: rem(50);
+
+    &::before {
+      @include square(62px);
+
+      content: "";
+      position: absolute;
+      right: rem(-30);
+      bottom: rem(-20);
+      background-image: url("../img/page-decor/balls/yellow-ball.png");
+
+      @include mobile-s {
+        top: 40%;
+      }
+    }
 
     @include tablet {
       grid-template-columns: 1fr;
