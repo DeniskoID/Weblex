@@ -1,0 +1,75 @@
+.services {
+  --auto-grid-max-columns: 3;
+  --auto-grid-min-size: 18rem;
+  --auto-grid-gap: 1.875rem;
+
+  &__item {
+    --_siGap: 20px;
+    --_siBorderClr: #25262c;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--_siBorderClr);
+    padding: rem(20) rem(20) rem(24);
+    gap: var(--_siGap);
+
+    @include mobile {
+      width: unset;
+    }
+  }
+
+  &__item-title {
+  }
+
+  &__item-text {
+    line-height: 1.4;
+  }
+
+  &__item-button {
+    display: none;
+  }
+
+  &__item-icon {
+    @include square(70px);
+
+    &--license {
+      background-image: url("../img/services/license.png");
+    }
+
+    &--integration {
+      background-image: url("../img/services/integration.png");
+    }
+
+    &--audit {
+      background-image: url("../img/services/audit.png");
+    }
+
+    &--support {
+      background-image: url("../img/services/support.png");
+    }
+
+    &--custom {
+      background-image: url("../img/services/custom.png");
+    }
+
+    &--rent {
+      background-image: url("../img/services/rent.png");
+    }
+
+    &--training {
+      background-image: url("../img/services/training.png");
+    }
+
+    &--dashboard {
+      background-image: url("../img/services/dashboard.png");
+    }
+
+    &--instalation {
+      background-image: url("../img/services/instalation.png");
+    }
+  }
+
+  // @include mobile {
+  //   flex-wrap: wrap;
+  // }
+}
