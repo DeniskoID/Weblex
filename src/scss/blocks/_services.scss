@@ -1,24 +1,83 @@
+/* stylelint-disable scss/double-slash-comment-empty-line-before */
+/* stylelint-disable order/order */
 .services {
   --auto-grid-max-columns: 3;
   --auto-grid-min-size: 18rem;
   --auto-grid-gap: 1.875rem;
+  --_square: 70px;
+
+  grid-auto-rows: 1fr;
 
   &__item {
     --_siGap: 20px;
     --_siBorderClr: #25262c;
 
+    position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     border: 1px solid var(--_siBorderClr);
-    padding: rem(20) rem(20) rem(24);
+    padding: rem(20) rem(30) rem(24) rem(20);
+    // isolation: isolate;
     gap: var(--_siGap);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(
+        152deg,
+        rgb(255 246 233 / 10%) 0%,
+        rgb(26 29 35 / 10%) 26%,
+        rgb(26 29 35 / 10%) 52%,
+        rgb(26 29 35 / 20%) 77%,
+        rgb(26 29 35 / 20%) 100%
+      );
+      backdrop-filter: blur(15px);
+      inset: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-image: url("../img/page-decor/noise.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      mix-blend-mode: overlay;
+      inset: 0;
+    }
 
     @include mobile {
       width: unset;
     }
+
+    @media (hover: hover) {
+      &:hover &-title,
+      &:hover &-text {
+        transform: translateY(calc((var(--_square) + var(--_siGap)) * -1));
+        transition-delay: 0.1s;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover &-icon {
+        transform: translateX(-200%);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover &-button {
+        bottom: 0;
+        transition-delay: 0.1s;
+      }
+    }
   }
 
-  &__item-title {
+  &__item-title,
+  &__item-text {
+    transition: transform 0.3s ease-in-out;
   }
 
   &__item-text {
@@ -26,11 +85,21 @@
   }
 
   &__item-button {
-    display: none;
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--button-height) * -1);
+    width: 100%;
+
+    @include tablet {
+      position: static;
+      margin-top: auto;
+    }
   }
 
   &__item-icon {
-    @include square(70px);
+    @include square(var(--_square));
+
+    transition: transform 0.3s ease-in-out;
 
     &--license {
       background-image: url("../img/services/license.png");
@@ -68,8 +137,4 @@
       background-image: url("../img/services/instalation.png");
     }
   }
-
-  // @include mobile {
-  //   flex-wrap: wrap;
-  // }
 }
