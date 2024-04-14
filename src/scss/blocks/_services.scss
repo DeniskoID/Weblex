@@ -1,9 +1,6 @@
 /* stylelint-disable scss/double-slash-comment-empty-line-before */
 /* stylelint-disable order/order */
 .services {
-  --auto-grid-max-columns: 3;
-  --auto-grid-min-size: 18rem;
-  --auto-grid-gap: 1.875rem;
   --_square: 70px;
 
   grid-auto-rows: 1fr;
@@ -19,6 +16,7 @@
     border: 1px solid var(--_siBorderClr);
     padding: rem(20) rem(30) rem(24) rem(20);
     // isolation: isolate;
+    backface-visibility: hidden;
     gap: var(--_siGap);
 
     &::before {
@@ -73,11 +71,16 @@
         transition-delay: 0.1s;
       }
     }
+
+    @include tablet {
+      padding-right: rem(20);
+    }
   }
 
   &__item-title,
   &__item-text {
     transition: transform 0.3s ease-in-out;
+    will-change: transform;
   }
 
   &__item-text {
@@ -89,6 +92,7 @@
     left: 0;
     bottom: calc(var(--button-height) * -1);
     width: 100%;
+    will-change: bottom;
 
     @include tablet {
       position: static;
@@ -100,6 +104,7 @@
     @include square(var(--_square));
 
     transition: transform 0.3s ease-in-out;
+    will-change: transform;
 
     &--license {
       background-image: url("../img/services/license.png");

@@ -1,5 +1,6 @@
 .blurred-balls {
   --_blur-m: 392px;
+  --_blur-s: 80px;
 
   position: relative;
 
@@ -81,6 +82,29 @@
 
     &::after {
       content: none;
+    }
+  }
+
+  &--services {
+    &::before {
+      @include square(103px);
+
+      left: 40%;
+      bottom: -103px;
+      z-index: -1;
+      background-color: var(--bb-color-orange);
+      filter: blur(var(--_blur-s));
+    }
+
+    &::after {
+      @include square(382px);
+
+      left: 100%;
+      bottom: 0;
+      z-index: -1;
+      background-color: var(--bb-color-violet);
+      opacity: 0.2;
+      filter: blur(var(--_blur-s));
     }
   }
 }

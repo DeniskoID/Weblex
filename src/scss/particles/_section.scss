@@ -38,6 +38,42 @@
     }
   }
 
+  &__body {
+    &--decor-dots {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+      }
+
+      &::before {
+        right: 0;
+        top: 70%;
+        z-index: -1;
+        width: rem(386);
+        height: rem(690);
+        background-image: url("../img/page-decor/dots-v2.png");
+        opacity: 0.5;
+
+        @include mobile-s {
+          display: none;
+        }
+      }
+
+      &::after {
+        @include square(40px);
+
+        left: 41.5%;
+        bottom: -70px;
+        background-image: url("../img/page-decor/balls/yellow-ball.png");
+        background-size: cover;
+        filter: blur(5px);
+      }
+    }
+  }
+
   &-title-h3 {
     font-family: var(--font-family-extra);
     font-weight: 500;
