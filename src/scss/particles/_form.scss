@@ -1,5 +1,6 @@
 .form {
   display: flex;
+  align-items: flex-end;
 
   &__field {
     display: flex;
@@ -72,9 +73,6 @@
     @include tablet {
       margin-bottom: 0;
     }
-  }
-
-  &__button {
   }
 
   &__privacy {

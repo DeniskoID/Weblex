@@ -101,12 +101,12 @@
     }
 
     &::before {
-      top: 0;
+      top: -1px;
       background-image: var(--section-border-top-gd);
     }
 
     &::after {
-      top: bottom;
+      bottom: -1px;
       background-image: var(--section-border-bottom-gd);
     }
   }

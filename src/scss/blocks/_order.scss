@@ -1,18 +1,14 @@
 .order {
   --_orderGridGap: 30px;
+  --_gridTCol: calc(var(--first-column-width) - var(--_orderGridGap)) 1fr;
 
   display: grid;
   column-gap: var(--_orderGridGap);
-  grid-template-columns: calc(var(--first-column-width) - var(--_orderGridGap)) 1fr;
-
-  &__description {
-  }
-
-  &__form {
-  }
+  grid-template-columns: var(--_gridTCol);
 
   @include tablet {
-    grid-template-columns: 1fr;
+    --_gridTCol: 1fr;
+
     row-gap: rem(40);
   }
 }

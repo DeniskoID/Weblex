@@ -4,7 +4,7 @@ const fixOpacity = () => {
   if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
     document.body.style.setProperty('--blur-opacity', '0.3');
   } else {
-    document.body.style.setProperty('--blur-opacity', '0.6');
+    document.body.style.setProperty('--blur-opacity', '0.2');
   }
 };
 
