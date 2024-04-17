@@ -14,8 +14,8 @@
       bottom: rem(-20);
       background-image: url("../img/page-decor/balls/yellow-ball.png");
 
-      @include mobile-s {
-        top: 40%;
+      @include mobile {
+        display: none;
       }
     }
 

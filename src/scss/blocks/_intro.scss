@@ -74,6 +74,10 @@
       right: 0;
       bottom: 50%;
       background-image: url("../img/page-decor/balls/purple-ball-s.png");
+
+      @include mobile {
+        display: none;
+      }
     }
 
     @include mobile {

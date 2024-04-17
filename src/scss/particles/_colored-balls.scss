@@ -1,0 +1,30 @@
+.colored-balls {
+  position: absolute;
+  inset: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    @include square(39px);
+
+    right: 0;
+    top: 50%;
+    background-image: url("../img/page-decor/balls/red-ball-s.png");
+  }
+
+  &::after {
+    @include square(85px);
+
+    right: 15%;
+    top: -43px;
+    background-image: url("../img/page-decor/balls/purple-ball.png");
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

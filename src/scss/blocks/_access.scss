@@ -1,4 +1,20 @@
 .access {
+  position: relative;
+
+  &::before {
+    @include square(62px);
+
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 105%;
+    background-image: url("../img/page-decor/balls/yellow-ball.png");
+
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__description {
     --_accessDescrDir: column;
 
