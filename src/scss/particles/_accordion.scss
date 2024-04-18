@@ -1,0 +1,54 @@
+.accordion {
+  --_panel-padding: 0.625rem;
+  --_button-size: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(5);
+
+  &__panel {
+    flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
+    overflow: hidden;
+    border: 0.5px solid var(--light-stroke);
+
+    &:has([aria-expanded="true"]) {
+      flex-grow: 1;
+      flex-basis: 200%;
+    }
+  }
+
+  &__panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: calc(var(--_panel-padding) * 1.5);
+    padding-left: calc(var(--_panel-padding) * 3);
+    padding-block: var(--_panel-padding);
+  }
+
+  &__panel-title {
+    font-family: var(--font-family-extra);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 1.2;
+  }
+
+  &__trigger {
+    @include square(size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    color: var(--title-color-alt);
+
+    &:focus-visible {
+      outline: 3px solid var(--color-blue);
+      outline-offset: 4px;
+    }
+  }
+
+  &__panel-content {
+    padding: rem(30);
+  }
+}

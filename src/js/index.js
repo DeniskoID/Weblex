@@ -15,3 +15,6 @@ videoSmartStart();
 
 import menuBgAnimation from './modules/header-bg.js';
 menuBgAnimation();
+
+import accordion from './modules/accordion.js';
+accordion('.accordion', '.accordion__panel', '.accordion__panel-content');
