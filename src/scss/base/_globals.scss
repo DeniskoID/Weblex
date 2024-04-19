@@ -17,7 +17,13 @@
 }
 
 .content {
-  overflow-x: clip;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  .content {
+    overflow-x: clip;
+  }
 }
 
 a,
