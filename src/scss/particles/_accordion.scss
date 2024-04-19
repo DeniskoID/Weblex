@@ -1,19 +1,55 @@
+/* stylelint-disable order/order */
 .accordion {
   --_panel-padding: 0.625rem;
   --_button-size: 2.5rem;
 
   display: flex;
   flex-direction: column;
-  padding-bottom: rem(5);
+  contain: content;
+  border: 0.5px solid var(--light-stroke);
+
+  // &__panel {
+  //   flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
+  //   overflow: hidden;
+  //   border: 0.5px solid var(--light-stroke);
+
+  //   &:has([aria-expanded="true"]) {
+  //     flex-grow: 1;
+  //     flex-basis: 200%;
+  //   }
+  // }
 
   &__panel {
-    flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
-    overflow: hidden;
-    border: 0.5px solid var(--light-stroke);
+    display: flex;
+    flex-direction: column;
 
-    &:has([aria-expanded="true"]) {
-      flex-grow: 1;
-      flex-basis: 200%;
+    @media (prefers-reduced-motion: no-preference) {
+      &:has([aria-expanded="true"]) p {
+        transition:
+          transform 500ms 500ms,
+          opacity 500ms 500ms;
+      }
+    }
+  }
+
+  &__panel-content {
+    flex-grow: 0;
+    overflow: hidden;
+    height: 0;
+    transform: scaleY(0);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: all 0.5s;
+    }
+
+    &:not(:last-child) {
+      border-top: unset;
+    }
+
+    p {
+      max-width: rem(625);
+      opacity: 0;
+      transform: translateY(2rem);
     }
   }
 
@@ -21,6 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 0.5px solid var(--light-stroke);
     padding-right: calc(var(--_panel-padding) * 1.5);
     padding-left: calc(var(--_panel-padding) * 3);
     padding-block: var(--_panel-padding);
@@ -34,8 +71,6 @@
   }
 
   &__trigger {
-    @include square(size);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +83,24 @@
     }
   }
 
-  &__panel-content {
-    padding: rem(30);
+  .active-panel {
+    .accordion__panel-content {
+      flex-grow: 1;
+      flex-basis: 100%;
+      padding: rem(30);
+      height: 50px;
+      transform: scaleY(1);
+    }
+
+    p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &.accordion__panel {
+      &:not(:last-child) {
+        border-bottom: 0.5px solid var(--light-stroke);
+      }
+    }
   }
 }
