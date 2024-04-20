@@ -1,0 +1,26 @@
+.dialog-element {
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__close-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  &__overlay {
+  }
+
+  &__close-button-wrapper {
+  }
+
+  &__body {
+  }
+
+  &__content {
+  }
+}

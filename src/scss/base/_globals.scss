@@ -1,12 +1,16 @@
-.page {
+.page,
+.page-body {
   height: 100%;
+  scrollbar-gutter: stable;
+}
+
+.page {
   min-height: 100vh;
   -webkit-text-size-adjust: 100%;
 }
 
 .page-body {
   overflow-x: hidden;
-  height: 100%;
   min-width: 320px;
   font-family: var(--font-family-base);
   font-weight: 400;
@@ -17,7 +21,8 @@
 }
 
 .content {
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: visible;
 }
 
 @supports (overflow: clip) {

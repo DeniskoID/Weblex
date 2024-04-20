@@ -16,8 +16,8 @@
     @media (prefers-reduced-motion: no-preference) {
       &:has([aria-expanded="true"]) p {
         transition:
-          transform 500ms 500ms,
-          opacity 500ms 500ms;
+          transform 0.3s 0.3s,
+          opacity 0.3s 0.3s;
       }
     }
   }
@@ -29,7 +29,7 @@
     transform: scaleY(0);
 
     @media (prefers-reduced-motion: no-preference) {
-      transition: all 0.5s;
+      transition: all 0.3s;
     }
 
     &:not(:last-child) {

@@ -1,0 +1,35 @@
+.certificates {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    border: 1px solid var(--light-stroke);
+    height: rem(105);
+    min-width: rem(195);
+    background: linear-gradient(
+      137deg,
+      rgb(255 246 233 / 10%) 0%,
+      rgb(26 29 35 / 10%) 27%,
+      rgb(26 29 35 / 10%) 52%,
+      rgb(26 29 35 / 20%) 78%,
+      rgb(26 29 35 / 20%) 100%
+    );
+    backdrop-filter: blur(15px);
+
+    @include mobile-s {
+      width: 100%;
+    }
+
+    @include hover {
+      border-image: var(--pastel-gradient);
+      border-image-slice: 1;
+    }
+  }
+}
