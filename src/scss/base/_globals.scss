@@ -1,11 +1,10 @@
 .page,
 .page-body {
-  height: 100%;
   scrollbar-gutter: stable;
 }
 
 .page {
-  min-height: 100vh;
+  height: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
