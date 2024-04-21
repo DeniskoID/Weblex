@@ -99,17 +99,5 @@
 
   &__results-icon {
     @include square(70px);
-
-    &--func {
-      background-image: url("../img/solves/func.png");
-    }
-
-    &--teach {
-      background-image: url("../img/solves/teach.png");
-    }
-
-    &--sales {
-      background-image: url("../img/solves/sales.png");
-    }
   }
 }

@@ -105,41 +105,5 @@
 
     transition: transform 0.3s ease-in-out;
     will-change: transform;
-
-    &--license {
-      background-image: url("../img/services/license.png");
-    }
-
-    &--integration {
-      background-image: url("../img/services/integration.png");
-    }
-
-    &--audit {
-      background-image: url("../img/services/audit.png");
-    }
-
-    &--support {
-      background-image: url("../img/services/support.png");
-    }
-
-    &--custom {
-      background-image: url("../img/services/custom.png");
-    }
-
-    &--rent {
-      background-image: url("../img/services/rent.png");
-    }
-
-    &--training {
-      background-image: url("../img/services/training.png");
-    }
-
-    &--dashboard {
-      background-image: url("../img/services/dashboard.png");
-    }
-
-    &--instalation {
-      background-image: url("../img/services/instalation.png");
-    }
   }
 }

@@ -1,9 +1,6 @@
 .clients {
   grid-auto-rows: 1fr;
 
-  &__item {
-  }
-
   &__item-text {
     font-family: var(--font-family-extra);
     font-weight: 500;
@@ -16,73 +13,9 @@
   }
 
   &__item-icon {
-    @include square(60px);
+    @include square(61px);
 
     margin-bottom: rem(10);
-
-    &--cleaning {
-      background-image: url("../img/clients/cleaning.png");
-    }
-
-    &--realty {
-      background-image: url("../img/clients/realty.png");
-    }
-
-    &--sport {
-      background-image: url("../img/clients/sport.png");
-    }
-
-    &--law {
-      background-image: url("../img/clients/law.png");
-    }
-
-    &--consulting {
-      background-image: url("../img/clients/consulting.png");
-    }
-
-    &--edu {
-      background-image: url("../img/clients/edu.png");
-    }
-
-    &--build {
-      background-image: url("../img/clients/build.png");
-    }
-
-    &--b2b {
-      background-image: url("../img/clients/b2b.png");
-    }
-
-    &--log {
-      background-image: url("../img/clients/log.png");
-    }
-
-    &--sales {
-      background-image: url("../img/clients/sales.png");
-    }
-
-    &--transport {
-      background-image: url("../img/clients/transport.png");
-    }
-
-    &--hr {
-      background-image: url("../img/clients/hr.png");
-    }
-
-    &--market {
-      background-image: url("../img/clients/market.png");
-    }
-
-    &--prod {
-      background-image: url("../img/clients/prod.png");
-    }
-
-    &--finance {
-      background-image: url("../img/clients/finance.png");
-    }
-
-    &--it {
-      background-image: url("../img/clients/it.png");
-    }
 
     @include mobile-s {
       margin-right: auto;

@@ -10,7 +10,7 @@ const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
-const webpCss = require('gulp-webp-css');
+// const webpCss = require('gulp-webp-css');
 
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
@@ -24,8 +24,8 @@ const babel = require('gulp-babel');
 const changed = require('gulp-changed');
 
 // Images
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
+// const imagemin = require('gulp-imagemin');
+// const webp = require('gulp-webp');
 
 gulp.task('clean:docs', function (done) {
   if (fs.existsSync('./docs/')) {
@@ -63,31 +63,35 @@ gulp.task('html:docs', function () {
 });
 
 gulp.task('sass:docs', function () {
-  return gulp
-    .src('./src/scss/*.scss')
-    .pipe(changed('./docs/css/'))
-    .pipe(plumber(plumberNotify('SCSS')))
-    .pipe(sourceMaps.init())
-    .pipe(autoprefixer())
-    .pipe(sassGlob())
-    .pipe(webpCss())
-    .pipe(groupMedia())
-    .pipe(sass())
-    .pipe(csso())
-    .pipe(sourceMaps.write())
-    .pipe(gulp.dest('./docs/css/'));
+  return (
+    gulp
+      .src('./src/scss/*.scss')
+      .pipe(changed('./docs/css/'))
+      .pipe(plumber(plumberNotify('SCSS')))
+      .pipe(sourceMaps.init())
+      .pipe(autoprefixer())
+      .pipe(sassGlob())
+      // .pipe(webpCss())
+      .pipe(groupMedia())
+      .pipe(sass())
+      .pipe(csso())
+      .pipe(sourceMaps.write())
+      .pipe(gulp.dest('./docs/css/'))
+  );
 });
 
 gulp.task('images:docs', function () {
-  return gulp
-    .src('./src/img/**/*')
-    .pipe(changed('./docs/img/'))
-    .pipe(webp())
-    .pipe(gulp.dest('./docs/img/'))
-    .pipe(gulp.src('./src/img/**/*'))
-    .pipe(changed('./docs/img/'))
-    .pipe(imagemin({ verbose: true }))
-    .pipe(gulp.dest('./docs/img/'));
+  return (
+    gulp
+      .src('./src/img/**/*')
+      .pipe(changed('./docs/img/'))
+      // .pipe(webp())
+      .pipe(gulp.dest('./docs/img/'))
+      .pipe(gulp.src('./src/img/**/*'))
+      .pipe(changed('./docs/img/'))
+      // .pipe(imagemin({ verbose: true }))
+      .pipe(gulp.dest('./docs/img/'))
+  );
 });
 
 gulp.task('fonts:docs', function () {
