@@ -17,11 +17,11 @@
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
+  -webkit-overflow-scrolling: touch;
 }
 
 .content {
   overflow: hidden;
-  overflow-y: visible;
 }
 
 @supports (overflow: clip) {
@@ -42,4 +42,10 @@ svg * {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+// Fix freezing scroll for iPhone7
+/* stylelint-disable-next-line selector-type-no-unknown */
+ion-app.platform-ios12 ion-content {
+  pointer-events: auto;
 }
