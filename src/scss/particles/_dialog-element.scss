@@ -1,7 +1,4 @@
 .dialog-element {
-  &__wrapper {
-  }
-
   &__button {
     display: flex;
     align-items: center;
@@ -20,16 +17,12 @@
     padding: 0;
 
     &::backdrop {
-      background-color: red;
+      background-color: rgba(149 149 149 / 20%);
+      backdrop-filter: blur(15px);
     }
   }
 
   &__close-button-wrapper {
-  }
-
-  &__body {
-  }
-
-  &__content {
+    --_cbBgColor: var(--light-stroke);
   }
 }

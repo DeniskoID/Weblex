@@ -18,3 +18,6 @@ menuBgAnimation();
 
 import accordion from './modules/accordion.js';
 accordion('.accordion', '.accordion__panel', '.accordion__panel-content');
+
+import startDialog from './modules/dialog-actions.js';
+startDialog();

@@ -1,4 +1,6 @@
 .cross-button {
+  // --_cbBgColor: var(--text-color);
+
   @include reset-button;
   @include square(48px);
 
@@ -14,7 +16,7 @@
     border-radius: 5px;
     width: 70%;
     height: 2px;
-    background-color: var(--text-color);
+    background-color: var(--_cbBgColor, var(--text-color));
   }
 
   &::before {
