@@ -13,8 +13,10 @@ function menuBgAnimation() {
     const tl = gsap.timeline({
       scrollTrigger: {
         start: 'top+=100',
+        end: 'bottom+=100',
         toggleActions: 'play none none reverse',
         toggleClass: { targets: menu, className: 'is-active' },
+        markers: false,
       },
     });
     tl.to(

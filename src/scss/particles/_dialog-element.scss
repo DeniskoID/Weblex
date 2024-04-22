@@ -1,4 +1,7 @@
 .dialog-element {
+  &__wrapper {
+  }
+
   &__button {
     display: flex;
     align-items: center;
@@ -13,6 +16,12 @@
   }
 
   &__overlay {
+    border: none;
+    padding: 0;
+
+    &::backdrop {
+      background-color: red;
+    }
   }
 
   &__close-button-wrapper {
