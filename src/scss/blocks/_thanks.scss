@@ -1,0 +1,39 @@
+.thanks {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__title-list {
+    max-width: rem(640);
+  }
+
+  &__title-item {
+    width: 100%;
+    min-height: rem(100);
+  }
+
+  &__title-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(15);
+    height: 100%;
+  }
+
+  &__content-list {
+    max-width: 43%;
+  }
+
+  &__content-item {
+  }
+
+  &__content-title {
+  }
+
+  &__content-author {
+  }
+
+  &__content-link {
+  }
+}
