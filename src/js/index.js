@@ -21,3 +21,6 @@ accordion('.accordion', '.accordion__panel', '.accordion__panel-content');
 
 import startDialog from './modules/dialog-actions.js';
 startDialog();
+
+import initTabs from './modules/tabs.js';
+initTabs();
