@@ -6,6 +6,10 @@
 
     &--with-paddings {
       padding-block: rem(50);
+
+      @include mobile {
+        padding-block: clamp(1.875rem, 0.98rem + 4.47vw, 3.125rem);
+      }
     }
   }
 
@@ -17,7 +21,7 @@
 
     @include mobile {
       margin-bottom: rem(30);
-      gap: rem(50);
+      gap: rem(40);
     }
   }
 
@@ -28,14 +32,6 @@
     font-weight: 400;
     font-size: var(--_section-title-fz);
     line-height: 1.3;
-
-    &:only-child {
-      margin-bottom: rem(20);
-
-      @include mobile {
-        margin-bottom: rem(20);
-      }
-    }
   }
 
   &__body {
@@ -112,6 +108,10 @@
     &::after {
       bottom: -1px;
       background-image: var(--section-border-bottom-gd);
+    }
+
+    @include mobile {
+      margin-bottom: rem(80);
     }
   }
 

@@ -62,6 +62,13 @@
   --font-family-base: "Montserrat", sans-serif;
   --font-family-extra: "Inter", sans-serif;
 
+  // Font sizes
+  // 767px → 320px: 16px → 14px
+  --adaptive-size-s: clamp(0.875rem, 0.786rem + 0.45vw, 1rem);
+
+  // 767px → 320px: 18px → 14px
+  --adaptive-size-m: clamp(0.875rem, 0.696rem + 0.89vw, 1.125rem);
+
   // Containers
   --container-width: 1140px;
   --container-padding-x: 20px;
