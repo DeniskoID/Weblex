@@ -1,0 +1,5 @@
+.scroll-content {
+  overflow: auto hidden;
+  scroll-snap-type: inline mandatory;
+  overscroll-behavior-inline: contain;
+}
