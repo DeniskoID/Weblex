@@ -8,20 +8,40 @@
     position: absolute;
   }
 
-  &::before {
-    @include square(39px);
+  &--access {
+    &::before {
+      @include square(39px);
 
-    right: 0;
-    top: 50%;
-    background-image: url("../img/page-decor/balls/red-ball-s.png");
+      right: 0;
+      top: 50%;
+      background-image: url("../img/page-decor/balls/red-ball-s.png");
+    }
+
+    &::after {
+      @include square(85px);
+
+      right: 15%;
+      top: -43px;
+      background-image: url("../img/page-decor/balls/purple-ball.png");
+    }
   }
 
-  &::after {
-    @include square(85px);
+  &--thanks {
+    &::before {
+      @include square(62px);
 
-    right: 15%;
-    top: -43px;
-    background-image: url("../img/page-decor/balls/purple-ball.png");
+      right: 54%;
+      bottom: rem(-31);
+      background-image: url("../img/page-decor/balls/yellow-ball.png");
+    }
+
+    &::after {
+      @include square(106px);
+
+      right: rem(-52);
+      bottom: 17%;
+      background-image: url("../img/page-decor/balls/red-ball.png");
+    }
   }
 
   @include mobile {

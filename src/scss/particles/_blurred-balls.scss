@@ -148,4 +148,29 @@
       }
     }
   }
+
+  &--thanks {
+    position: absolute;
+    inset: 0;
+
+    &::before {
+      @include square(670px);
+
+      left: 53%;
+      bottom: -28px;
+      z-index: -1;
+      background-color: var(--bb-color-dark-red);
+      filter: blur(var(--_blur-s));
+    }
+
+    &::after {
+      @include square(606px);
+
+      left: -20%;
+      bottom: 0;
+      z-index: -1;
+      background-color: var(--bb-color-violet);
+      filter: blur(var(--_blur-s));
+    }
+  }
 }
