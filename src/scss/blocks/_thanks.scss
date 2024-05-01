@@ -66,8 +66,8 @@
     }
 
     @include hover {
-      border-image: var(--pastel-gradient);
-      border-image-slice: 1;
+      @include gradient-border;
+
       color: var(--color-light);
       filter: grayscale(0);
     }

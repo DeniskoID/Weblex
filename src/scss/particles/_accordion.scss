@@ -54,8 +54,7 @@
     padding-block: var(--_panel-padding);
 
     @include hover {
-      border-image: var(--pastel-gradient);
-      border-image-slice: 1;
+      @include gradient-border;
     }
   }
 

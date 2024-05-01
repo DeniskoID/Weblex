@@ -173,4 +173,8 @@
       }
     }
   }
+
+  @include mobile {
+    --section-padding-y: 5rem;
+  }
 }

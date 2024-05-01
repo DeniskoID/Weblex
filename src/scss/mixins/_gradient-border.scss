@@ -1,0 +1,4 @@
+@mixin gradient-border {
+  border-image: var(--pastel-gradient);
+  border-image-slice: 1;
+}
