@@ -1,0 +1,77 @@
+<section class="section">
+    <div class="section__content container">
+        <div class="section__header">
+            <h2 class="section__title">Блог</h2>
+            <div class="section__description section__description--grid-row">
+                <p>
+                    Мы ведём свой<br><span class="text-decor">YouTube канал</span>
+                </p>
+                <p>
+                    +100 полезных видео<br>с&nbsp;разбором решений задач в&nbsp;области доработки AmoCRM.
+                </p>
+            </div>
+        </div>
+        <div class="section__body">
+            <div class="blog">
+                <div class="blog__item blog__item--single" data-dialog-element>
+                    <button type="button" class="blog__video-button btn-reset" data-dialog-open-btn
+                        title="Смотреть видео в модальном окне">
+                        <span class="visually-hidden">Смотреть видео в модальном окне</span>
+                        <picture>
+                            <source srcset="./img/blog/cover-1.avif" type="image/avif">
+                            <source srcset="./img/blog/cover-1.webp" type="image/webp">
+                            <img loading="lazy" src="./img/blog/cover-1.jpg" class="image" width="458" height="258"
+                                alt="Обложка видео">
+                        </picture>
+                    </button>
+                    <dialog class="blog__item-dialog-overlay" data-lenis-prevent>
+                        <div class="blog__item-dialog-wrapper">
+                            <form class="blog__item-dialog-close-btn-wrapper" method="dialog">
+                                <button type="submit" class="blog__item-dialog-close-btn cross-button"
+                                    data-dialog-close-btn>
+                                    <span class="visually-hidden">Закрыть видео</span>
+                                </button>
+                            </form>
+                            <div class="blog__item-dialog-body">
+                                <div class="blog__item-dialog-content">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/opHu7HvFM60?si=O4Ovh6l-PxUEe-xW&amp;start=1"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="blog__items-wrapper">
+                    <picture>
+                        <source srcset="./img/blog/cover-2.avif" type="image/avif">
+                        <source srcset="./img/blog/cover-2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog/cover-2.jpg" class="image" width="196" height="111"
+                            alt="Обложка видео">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/blog/cover-3.avif" type="image/avif">
+                        <source srcset="./img/blog/cover-3.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog/cover-3.jpg" class="image" width="196" height="111"
+                            alt="Обложка видео">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/blog/cover-4.avif" type="image/avif">
+                        <source srcset="./img/blog/cover-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog/cover-4.jpg" class="image" width="196" height="111"
+                            alt="Обложка видео">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/blog/cover-5.avif" type="image/avif">
+                        <source srcset="./img/blog/cover-5.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog/cover-5.jpg" class="image" width="196" height="111"
+                            alt="Обложка видео">
+                    </picture>
+                </div>
+                <a class="blog__follow-link link-with-arrow" href="/">Подписаться на канал</a>
+            </div>
+        </div>
+    </div>
+</section>

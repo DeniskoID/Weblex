@@ -1,11 +1,7 @@
-.page,
-.page-body {
-  scrollbar-gutter: stable;
-}
-
 .page {
   height: 100%;
   -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
 }
 
 .page-body {
