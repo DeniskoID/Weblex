@@ -1,15 +1,19 @@
 const videoSmartStart = () => {
   function findVideos() {
-    const videos = document.querySelectorAll('.yt-video');
+    const videos = document.querySelectorAll('.yt-video-container');
 
-    for (let i = 0; i < videos.length; i++) {
-      setupVideo(videos[i]);
-    }
+    videos.forEach((video) => {
+      setupVideo(video);
+    });
   }
 
   function setupVideo(video) {
-    const link = video.querySelector('.yt-video__link');
-    const button = document.querySelector('.video-button');
+    const link =
+      video.querySelector('.yt-video-link') ||
+      video.closest('.yt-video').querySelector('.yt-video-link');
+    const button =
+      video.querySelector('.yt-video-button') ||
+      video.closest('.yt-video').querySelector('.yt-video-button');
     const id = parseMediaURL(link);
 
     let videoStarted = false;

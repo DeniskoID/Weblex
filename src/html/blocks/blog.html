@@ -13,8 +13,8 @@
         </div>
         <div class="section__body">
             <div class="blog">
-                <div class="blog__item blog__item--single" data-dialog-element>
-                    <button type="button" class="blog__video-button btn-reset" data-dialog-open-btn
+                <div class="blog__item blog__item--single yt-video" data-dialog-element>
+                    <button type="button" class="blog__video-button btn-reset yt-video-button" data-dialog-open-btn
                         title="Смотреть видео в модальном окне">
                         <span class="visually-hidden">Смотреть видео в модальном окне</span>
                         <picture>
@@ -23,6 +23,7 @@
                             <img loading="lazy" src="./img/blog/cover-1.jpg" class="image" width="458" height="258"
                                 alt="Обложка видео">
                         </picture>
+                        <div class="blog__item-fake-button video-button"></div>
                     </button>
                     <dialog class="blog__item-dialog-overlay" data-lenis-prevent>
                         <div class="blog__item-dialog-wrapper">
@@ -33,12 +34,9 @@
                                 </button>
                             </form>
                             <div class="blog__item-dialog-body">
-                                <div class="blog__item-dialog-content">
-                                    <iframe width="560" height="315"
-                                        src="https://www.youtube.com/embed/opHu7HvFM60?si=O4Ovh6l-PxUEe-xW&amp;start=1"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <a class="yt-video-link visually-hidden"
+                                    href="https://www.youtube.com/watch?v=4JS70KB9GS0"></a>
+                                <div class="blog__item-dialog-content yt-video-container">
                                 </div>
                             </div>
                         </div>

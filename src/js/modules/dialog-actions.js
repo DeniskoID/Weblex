@@ -1,4 +1,5 @@
 import lenis from './lenis';
+import VideoPlayer from './yt-player-alt';
 
 function startDialog() {
   const dialogElements = document.querySelectorAll('[data-dialog-element]');
@@ -8,9 +9,26 @@ function startDialog() {
   dialogElements.forEach((dialogElement) => {
     const openButton = dialogElement.querySelector('[data-dialog-open-btn]');
     const dialog = dialogElement.querySelector('dialog');
+    let player;
 
-    openButton.addEventListener('click', () => openOnButtonClick(dialog));
-    dialog.addEventListener('click', closeOnBackDropClick);
+    if (dialogElement.classList.contains('yt-video')) {
+      player = new VideoPlayer(dialogElement);
+    }
+
+    openButton.addEventListener('click', () => {
+      openOnButtonClick(dialog);
+
+      if (player) {
+        player.playVideoToggle();
+      }
+    });
+    dialog.addEventListener('click', (e) => {
+      closeOnBackDropClick(e);
+
+      if (player) {
+        player.playVideoToggle();
+      }
+    });
   });
 
   function openOnButtonClick(dialogElement) {
@@ -22,11 +40,11 @@ function startDialog() {
     dialogElement.showModal();
   }
 
-  function closeOnBackDropClick({ currentTarget, target }) {
-    const dialogElement = currentTarget;
+  function closeOnBackDropClick(e) {
+    const dialogElement = e.currentTarget;
     const closeButton = dialogElement.querySelector('[data-dialog-close-btn]');
-    const isClickedOnBackDrop = target === dialogElement;
-    const isClickedOnCloseButton = target === closeButton;
+    const isClickedOnBackDrop = e.target === dialogElement;
+    const isClickedOnCloseButton = e.target === closeButton;
 
     if (isClickedOnBackDrop) {
       dialogElement.close();

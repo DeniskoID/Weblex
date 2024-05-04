@@ -10,8 +10,8 @@ mobileMenuInteraction();
 import fixOpacity from './utilits/fix-opacity.js';
 fixOpacity();
 
-import videoSmartStart from './modules/yt-player.js';
-videoSmartStart();
+import VideoPlayer from './modules/yt-player-alt.js';
+new VideoPlayer(document.querySelector('.yt-video-intro')).init();
 
 import menuBgAnimation from './modules/header-bg.js';
 menuBgAnimation();
