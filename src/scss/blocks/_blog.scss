@@ -1,5 +1,17 @@
 .blog {
-  display: flex;
+  --_blogGridColGap: clamp(0.625rem, 0.341rem + 1.42vw, 1.25rem);
+  --_blogGridRowGap: clamp(0.625rem, -0.115rem + 3.7vw, 2.25rem);
+
+  display: grid;
+  grid-template-areas:
+    "cover1 cover2 cover3 cover6"
+    "cover1 cover4 cover5 cover6";
+  grid-template-columns:
+    calc(var(--first-column-width) - var(--_blogGridColGap))
+    repeat(3, minmax(120px, max-content));
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  grid-template-rows: 1fr 1fr;
+  gap: var(--_blogGridRowGap) var(--_blogGridColGap);
 
   picture {
     display: block;
@@ -8,15 +20,37 @@
   img {
     filter: brightness(70%);
     transition: filter 0.2s ease-in-out;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__item {
-  }
+    &--1 {
+      grid-area: cover1;
+    }
 
-  &__item--single {
-    padding-right: rem(30);
-    width: 100%;
-    max-width: var(--first-column-width);
+    &--2 {
+      grid-area: cover2;
+    }
+
+    &--3 {
+      grid-area: cover3;
+    }
+
+    &--4 {
+      grid-area: cover4;
+    }
+
+    &--5 {
+      grid-area: cover5;
+    }
+
+    &--6 {
+      align-self: end;
+      grid-area: cover6;
+    }
   }
 
   &__video-button {
@@ -40,19 +74,20 @@
   }
 
   &__item-dialog-overlay {
+    border: none;
+    padding: 0;
     width: 138vmin;
-  }
+    background-color: transparent;
 
-  &__item-dialog-wrapper {
-  }
-
-  &__item-dialog-close-btn-wrapper {
+    &::backdrop {
+      background-color: rgb(149 149 149 / 20%);
+      backdrop-filter: blur(15px);
+    }
   }
 
   &__item-dialog-close-btn {
-  }
-
-  &__item-dialog-body {
+    display: block;
+    margin-left: auto;
   }
 
   &__item-dialog-content {
@@ -67,6 +102,23 @@
     gap: rem(36) rem(20);
   }
 
-  &__follow-link {
+  &__item-follow-link {
+    margin-left: auto;
+    width: fit-content;
+
+    @include mobile {
+      margin-left: initial;
+      padding-top: rem(20);
+    }
+  }
+
+  @include mobile {
+    grid-template-areas:
+      "cover1 cover1"
+      "cover1 cover1"
+      "cover2 cover3"
+      "cover4 cover5"
+      "cover6 cover6";
+    grid-template-columns: 1fr 1fr;
   }
 }
