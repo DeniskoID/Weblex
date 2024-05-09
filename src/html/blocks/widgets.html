@@ -1,7 +1,7 @@
 <section class="section">
     <div class="section__content container">
         <div class="section__header">
-            <h2 class="section__title">Виджеты</h2>
+            <h2 id="widgets-tabs-title" class="section__title">Виджеты</h2>
             <div class="section__description section__description--grid-row">
                 <p>Для вас разработали<br>
                     <span class="text-decor">готовые решения<br>в&nbsp;виде виджетов</span>
@@ -12,7 +12,379 @@
             </div>
         </div>
         <div class="section__body">
-
+            <div class="widgets" data-tabs-container>
+                <ul class="widgets__title-list" data-tabs-list aria-labelledby="widgets-tabs-title" role="tablist"
+                    data-lenis-prevent>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-1" data-tabs-link>
+                            Яндекс Диск
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-2" data-tabs-link>
+                            Google Drive
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-3" data-tabs-link>
+                            Распределение заявок
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-4" data-tabs-link>
+                            Время на&nbsp;этапе
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-5" data-tabs-link>
+                            История посещений
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-6" data-tabs-link>
+                            Синхронизация сделок
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-7" data-tabs-link>
+                            Синхронизация с&nbsp;Asana
+                        </a>
+                    </li>
+                    <li class="widgets__title-item">
+                        <a class="widgets__title-link" href="#widgets-tab-content-8" data-tabs-link>
+                            Уведомление в&nbsp;Telegram
+                        </a>
+                    </li>
+                </ul>
+                <div class="widgets__content-list" data-tabs-content>
+                    <div id="widgets-tab-content-1" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-1"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:
+                                    </h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-2" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-2"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:
+                                    </h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-3" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-3"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:</h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-4" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-4"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">
+                                        Попробуйте виджет бесплатно:
+                                    </h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-5" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-5"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:</h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-6" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-6"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:</h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-7" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-7"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:
+                                    </h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="widgets-tab-content-8" class="widgets__content-item">
+                        <div class="widgets__content-item-wrapper">
+                            <div class="widgets__content-item-features">
+                                <h3 id="widgets-tab-content-title-8"
+                                    class="widgets__content-item-title section-title-h3">
+                                    Основные
+                                    возможности:</h3>
+                                <ul class="widgets__content-item-list">
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Загрузка файлов любого формата
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Отображение файлов прямо в&nbsp;сделке в&nbsp;виде примечания,
+                                            а&nbsp;так&nbsp;же в&nbsp;панели справа
+                                        </p>
+                                    </li>
+                                    <li class="widgets__content-item-text text-with-dash">
+                                        <p>
+                                            Сортировка всех файлов по&nbsp;папкам
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="widgets__content-item-cta widget-cta">
+                                <header class="widget-cta__header">
+                                    <h3 class="widget-cta__title section-title-h3">Попробуйте виджет бесплатно:
+                                    </h3>
+                                </header>
+                                <div class="widget-cta__body">
+                                    <div class="widget-cta__terms text-with-dash">
+                                        <p>1 месяц бесплатно</p>
+                                        <p>Затем выберите тариф<br>на&nbsp;6, 9, 12&nbsp;или 24&nbsp;месяца</p>
+                                    </div>
+                                    <button class="widget-cta__button button btn-reset">Попробовать бесплатно</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

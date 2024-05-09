@@ -31,7 +31,11 @@
   --border-radius-large: 45px;
 
   // Gradients
-  --body-lines-gd: linear-gradient(180deg, rgb(132 59 181 / 10%) 47%, rgb(252 176 69 / 10%) 87%);
+  --body-lines-gd: linear-gradient(
+    180deg,
+    rgb(132 59 181 / 10%) 47%,
+    rgb(252 176 69 / 10%) 87%
+  );
   --body-lines-gd-alt: linear-gradient(
     180deg,
     rgb(255 255 255 / 0%) 0%,
@@ -39,7 +43,12 @@
     #fd8787 55%,
     rgb(219 166 255) 100%
   );
-  --section-border-top-gd: linear-gradient(90deg, #833ab4 0%, #fd1d1d 42%, #fcb045 100%);
+  --section-border-top-gd: linear-gradient(
+    90deg,
+    #833ab4 0%,
+    #fd1d1d 42%,
+    #fcb045 100%
+  );
   --section-border-bottom-gd: linear-gradient(
     90deg,
     rgb(131 58 180 / 40%) 0%,
@@ -53,6 +62,14 @@
     rgb(255 216 160 / 50%) 0%,
     rgb(253 135 135 / 50%) 65%,
     rgb(219 166 255) 100%
+  );
+  --background-gradient: linear-gradient(
+    137deg,
+    rgb(26 29 35 / 10%) 0%,
+    rgb(26 29 35 / 10%) 27%,
+    rgb(26 29 35 / 10%) 52%,
+    rgb(26 29 35 / 20%) 78%,
+    rgb(26 29 35 / 20%) 100%
   );
 
   // Shadows

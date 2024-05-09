@@ -10,7 +10,9 @@ function initTabs() {
   tabsContainers.forEach((tabContainer) => {
     const tabsList = tabContainer.querySelector('[data-tabs-list]');
     const tabButtons = tabsList.querySelectorAll('[data-tabs-link]');
-    const tabPanels = tabContainer.querySelectorAll('[data-tabs-content] > div');
+    const tabPanels = tabContainer.querySelectorAll(
+      '[data-tabs-content] > div',
+    );
 
     tabsList.setAttribute('role', 'tablist');
 
@@ -22,10 +24,9 @@ function initTabs() {
       tab.setAttribute('role', 'tab');
       if (index === 0) {
         tab.setAttribute('aria-selected', 'true');
-        // we'll add something here
       } else {
         tab.setAttribute('tabindex', '-1');
-        tabPanels[index].setAttribute('hidden', '');
+        tabPanels[index] ? tabPanels[index].setAttribute('hidden', '') : '';
       }
     });
 
@@ -66,7 +67,9 @@ function initTabs() {
       if (!currentTab.parentElement.previousElementSibling) {
         switchTab(tabButtons[tabButtons.length - 1]);
       } else {
-        switchTab(currentTab.parentElement.previousElementSibling.querySelector('a'));
+        switchTab(
+          currentTab.parentElement.previousElementSibling.querySelector('a'),
+        );
       }
     }
 
@@ -75,7 +78,9 @@ function initTabs() {
       if (!currentTab.parentElement.nextElementSibling) {
         switchTab(tabButtons[0]);
       } else {
-        switchTab(currentTab.parentElement.nextElementSibling.querySelector('a'));
+        switchTab(
+          currentTab.parentElement.nextElementSibling.querySelector('a'),
+        );
       }
     }
 
