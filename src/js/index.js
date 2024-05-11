@@ -4,6 +4,15 @@
 import lenis from './modules/lenis.js';
 lenis.start();
 
+import checkScrolbarWidth from './utilits/scrollbar-width-test.js';
+checkScrolbarWidth();
+
+import detectBrowser from './utilits/check-browser.js';
+detectBrowser();
+
+import setBrowserAttribute from './utilits/set-browser-attribute.js';
+setBrowserAttribute();
+
 import mobileMenuInteraction from './modules/mobile-menu.js';
 mobileMenuInteraction();
 

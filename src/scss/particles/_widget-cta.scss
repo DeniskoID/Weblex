@@ -38,5 +38,14 @@
   &__button {
     flex-shrink: 0;
     flex-basis: rem(263);
+
+    @include mobile-s {
+      flex-basis: initial;
+    }
+  }
+
+  @include mobile {
+    padding: unset;
+    background-color: var(--bg-color);
   }
 }

@@ -26,15 +26,28 @@
   }
 
   &__title-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     order: 1;
     overflow-y: auto;
     width: 100%;
     max-width: rem(359);
+
+    @include tablet {
+      order: 0;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+      overflow: auto hidden;
+      padding-bottom: rem(10);
+      max-width: unset;
+      scroll-snap-type: inline mandatory;
+      overscroll-behavior-inline: contain;
+    }
   }
 
   &__title-item {
+    @include tablet {
+      scroll-snap-align: start;
+    }
   }
 
   &__title-link {
@@ -44,8 +57,10 @@
 
     position: relative;
     display: block;
+    overflow: hidden;
     border: 1px solid transparent;
     padding: var(--_tlptb) var(--_tlpr) var(--_tlptb) var(--_tlpl);
+    font-size: rem(18);
     transition: all 0.4s ease-in-out;
 
     &::before {
@@ -70,6 +85,15 @@
 
     @include hover {
       border-color: var(--color-dark-gray);
+    }
+
+    @include tablet {
+      --_tlptb: 0.938rem; /* 15px */
+      --_tlpr: 0.938rem; /* 15px */
+      --_tlpl: 2.813rem; /* 45px */
+
+      width: max-content;
+      font-size: rem(16);
     }
 
     @keyframes slide-grad {
@@ -99,12 +123,24 @@
     padding: rem(60) rem(30) rem(30);
     height: 100%;
     row-gap: rem(10);
+
+    @include tablet {
+      row-gap: rem(40);
+    }
+
+    @include mobile-s {
+      padding: rem(40) rem(20) rem(20);
+    }
   }
 
   &__content-item-features {
     --_fpl: 2.313rem; /* 37px */
 
     padding-left: var(--_fpl);
+
+    @include mobile {
+      padding-left: unset;
+    }
   }
 
   &__content-item-title {
@@ -130,5 +166,10 @@
   }
 
   &__content-item-cta {
+  }
+
+  @include tablet {
+    flex-direction: column;
+    max-height: unset;
   }
 }

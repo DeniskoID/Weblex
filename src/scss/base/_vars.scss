@@ -104,6 +104,17 @@
   // Decor lines
   --first-column-width: 43%;
 
+  // Custom scrollbar
+
+  --scrollbar-size: 12px;
+  --scrollbar-size-s: 10px;
+  --scrollbar-minlength: 5rem; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+  --scrollbar-ff-width: thin; /* FF-only accepts auto, thin, none */
+  --scrollbar-track-color: rgb(101 101 102 / 10%);
+  --scrollbar-color: var(--action-color);
+  --scrollbar-color-hover: var(--action-color);
+  --scrollbar-color-active: var(--action-color);
+
   @include desktop {
     --section-padding-y: 150px;
   }
