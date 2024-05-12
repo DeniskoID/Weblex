@@ -1,3 +1,5 @@
+import lenis from './lenis';
+
 const mobileMenuInteraction = function () {
   const menu = document.querySelector('.header__menu');
   const menuButton = document.querySelector('.mobile-nav-btn');
@@ -16,6 +18,7 @@ const mobileMenuInteraction = function () {
       document.body.classList.add('no-scroll');
       menu.classList.add('header__menu--open');
       menuIcon.classList.add('nav-icon--active');
+      lenis.stop();
     } else {
       isOpen = false;
       menuButton.setAttribute('aria-expanded', false);
@@ -23,6 +26,7 @@ const mobileMenuInteraction = function () {
       document.body.classList.remove('no-scroll');
       menu.classList.remove('header__menu--open');
       menuIcon.classList.remove('nav-icon--active');
+      lenis.start();
     }
   });
 };

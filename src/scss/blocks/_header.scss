@@ -130,6 +130,7 @@
   }
 
   @include mobile {
+    position: relative;
     padding-top: 15px;
   }
 }

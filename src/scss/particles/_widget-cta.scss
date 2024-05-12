@@ -11,13 +11,15 @@
   );
 
   &__header {
-  }
-
-  &__title {
     margin-bottom: rem(20);
 
     @include mobile {
       margin-bottom: rem(15);
+    }
+
+    @include mobile-s {
+      padding-right: rem(15);
+      padding-left: rem(15);
     }
   }
 
@@ -33,19 +35,34 @@
     p:not(:last-of-type) {
       margin-bottom: rem(10);
     }
+
+    @include mobile-s {
+      padding-right: rem(15);
+      padding-left: rem(15);
+    }
   }
 
   &__button {
     flex-shrink: 0;
     flex-basis: rem(263);
 
-    @include mobile-s {
-      flex-basis: initial;
+    @include mobile {
+      flex-basis: 100%;
     }
   }
 
   @include mobile {
+    --_wpr: 0.938rem;
+    --_wpl: 0.938rem;
+
+    border: 1px solid transparent;
+    border-image: var(--pastel-gradient);
+    border-image-slice: 1;
+  }
+
+  @include mobile-s {
     padding: unset;
+    padding-top: rem(20);
     background-color: var(--bg-color);
   }
 }
